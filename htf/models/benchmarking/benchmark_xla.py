@@ -163,4 +163,4 @@ with hoomd.htf.tfcompute(model_dir,
                                                limit_hours=2)
     
 with open('{}-particles_{}_xla_time.txt'.format(N, use_xla), 'w+') as f:
-    f.write('Elapsed time with {} particles: {}'.format(N,str(benchmark_results)))
+    f.write('Benchmark Timesteps Per Second with {} particles: {} (Mean: {})'.format(N,str(benchmark_results), np.mean(benchmark_results)))
